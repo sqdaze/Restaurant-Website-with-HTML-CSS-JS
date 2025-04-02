@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaureat</title>
+    <link rel="stylesheet" href="./Html & Css & Js files/CSS files/style.css">
+    <script src="./Html & Css & Js files/JS files/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/a1dd8c9f59.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--========== Header ==========-->
+    <header>
+        <div class="navbar">
+            <nav>
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h1>Restaureat</h1>
+                </a>
+
+                <!-- Navbar List -->
+                <i class="fa-solid fa-bars"></i>
+                <div class="backdrop"></div>
+                <ul>
+                    <i class="fa-solid fa-x"></i>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#order">Order</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <!--========== Main ==========-->
+    <main>
+        <!-- Home Section -->
+        <section class="home" id="home">
+            <div class="content">
+                <h1>Craving something delicious?</h1><br> <p>Visit us and enjoy our delicious dishes. <br> you can order your meals and have them delivered to your doorstep</p>
+                <a href="#order" id="orderButton">Order Now</a>
+            </div>
+
+            <video autoplay muted plays-inline loop>
+                <source src="./Videos/Barbecue Video.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu" id="menu">
+            <div class="container">
+                <div class="textPart">
+                    <h1>Food Menu</h1>
+                    <p>Check out our menu, choose your delicious dishes and order them to be delivered to your doorstep</p>
+                    <a href="#order" id="orderButton">Order Now</a>
+                </div>
+
+                <div class="imagePart">
+                    <img src="./Images/Food Menu.png">
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Section -->
+        <section class="order" id="order">
+            <div class="container">
+                <div class="imagePart">
+                    <img src="./Images/Box.png">
+                </div>
+                <div class="textPart">
+                    <h1>Order Now</h1>
+                    <p>Let's chose your delicious dishes and order them now to be delivered to your doorstep</p>
+                    <a href="./Html & Css & Js files/HTML files/order page.html">Order Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="titlePart">
+                    <h1>About <i class="fa-solid fa-circle-info"></i></h1>
+                </div>
+                <div class="aboutPart">
+                    <p>
+                        Welcome to Restaureat – An Elevated Dining Experience
+
+                        Retaureat offers an exceptional dining experience where quality, flavor, and hospitality come together. showcasing a carefully curated menu that highlights seasonal, locally-sourced ingredients and expertly crafted dishes.
+                        Our commitment to excellence is reflected in every detail, from the artfully prepared meals to the elegant ambiance of our restaurant. Whether you are here for a business dinner, a special occasion, or a casual meal with friends, we provide an inviting and sophisticated setting for all guests.
+                        The culinary team at Restaureat takes pride in creating innovative yet timeless dishes, blending traditional techniques with modern flair. Each plate is a testament to our dedication to flavor and presentation, ensuring that every dining experience is unforgettable.
+                        Our service is attentive and personalized, designed to make your time with us seamless and enjoyable. We strive to exceed expectations, offering not just a meal, but a memorable experience.
+                        Join us at Retaureat for a truly distinctive dining experience. We look forward to serving you.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="titlePart">
+                    <h1>Contact Us <i class="fa-solid fa-message"></i></h1>
+                </div>
+                <div class="contactFormPart">
+                    <form>
+                        <label for="fullNameInput">Full Name<span>*</span></label>
+                        <input type="text" id="fullNameInput" name="Full Name">
+
+                        <label for="emailInput">E-mail<span>*</span></label>
+                        <input type="email" id="emailInput" name="E-mail">
+
+                        <label for="messageInput">Message<span>*</span></label>
+                        <textarea name="Message" id="messageInput"></textarea>
+
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!--========== Footer ==========-->
+    <footer>
+        <div class="container">
+            <div class="content">
+                <div class="copyright">
+                    <span>Copyright &copy; <span class="copyrightYear"></span> All rights reserved </span>
+                </div>
+
+                <div class="socialMedia">
+                    <ul>
+                        <li><i class="fa-brands fa-facebook-f"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-solid fa-x"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

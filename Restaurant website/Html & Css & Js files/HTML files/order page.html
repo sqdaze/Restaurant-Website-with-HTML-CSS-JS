@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now</title>
+    <link rel="stylesheet" href="../CSS files/style.css">
+    <script src="../JS files/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/a1dd8c9f59.js" crossorigin="anonymous"></script>
+</head>
+<body class="orderBody">
+    <!--========== Chose Dishes and Chosed Diches ==========-->
+    <div class="choseDishesAndChosedDishes">
+        <div class="choseDishesAndChosedDishesContainer">
+            <a href="../../index.html" class="backToHomeBtn"><i class="fa-solid fa-x"></i> Close</a>
+            <div class="choseDishes">
+                <div class="title"><h1>Chose your dishes</h1></div>
+                <!-- Foods and Drinks Lists Container -->
+                <div class="foodsAndDrinksListsContainer">
+                    <!-- Foods Lists Container -->
+                    <div class="foodListsContainer listsContainers">
+                        <h1 class="title">Food</h1>
+                        <div class="foodLists">
+                            <ul class="list1">
+                                <li><span>Beef steak..........$<div class="price">80</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Tuna steak..........$<div class="price">64</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Chicken steak.....$<div class="price">40</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Salmon fillet........$<div class="price">60</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Ribeye..................$<div class="price">70</div></span><i class="fa-solid fa-plus"></i></li>
+                            </ul>
+                            <ul class="list2">
+                                <li><span>Porterhouse steak...$<div class="price">68</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>T-bone steak............$<div class="price">50</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Tnew york strip........$<div class="price">43</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Pasta.........................$<div class="price">40</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Spaghetti...................$<div class="price">70</div></span><i class="fa-solid fa-plus"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Drinks Lists Container -->
+                    <div class="drinksListsContainer listsContainers">
+                        <h1 class="title">Drinks</h1>
+                        <div class="drinksLists">
+                            <ul class="list3">
+                                <li><span>Mineral water...$<div class="price">5</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Orange juice.....$<div class="price">20</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Milkshake..........$<div class="price">30</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Ice Tea...............$<div class="price">11</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Hot tea...............$<div class="price">10</div></span><i class="fa-solid fa-plus"></i></li>
+                            </ul>
+                            <ul class="list4">
+                                <li><span>Ice Chocolate...$<div class="price">17</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Hot Chocolate...$<div class="price">22</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Apple juice........$<div class="price">15</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>cocktail.............$<div class="price">30</div></span><i class="fa-solid fa-plus"></i></li>
+                                <li><span>Ice milk.............$<div class="price">26</div></span><i class="fa-solid fa-plus"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chosed Dishes -->
+            <div class="chosedDishes">
+                <div class="chosedDishesContent">
+                    <ul>
+                        <div class="clearAllBtnDiv"><span class="clearAllBtn">Clear All</span></div>
+                        <h1>The chosed dishes will appear here</h1>
+                    </ul>
+                    <button type="button">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--========== Informations Form ==========-->
+    <div class="informationsForm">
+        <div class="informationsFormContainer">
+            <span class="backBtn"><i class="fa-solid fa-angle-left"></i>Back</span>
+            <form>
+                <label for="firstName">First Name<span>*</span></label>
+                <input type="text" id="firstName" name="First Name">
+
+                <label for="lastName">Last Name<span>*</span></label>
+                <input type="text" id="lastName" name="Last Name">
+
+                <label for="country">Country<span>*</span></label>
+                <input type="text" id="country" name="Country">
+
+                <label for="city">City<span>*</span></label>
+                <input type="text" id="city" name="City">
+
+                <label for="zip">Zip<span>*</span></label>
+                <input type="text" id="zip" name="Zip">
+
+                <label for="address1">Address 1<span>*</span></label>
+                <input type="text" id="address1" name="Address1">
+
+                <label for="address2">Address 2</label>
+                <input type="text" id="address2" name="Address2">
+
+                <label for="email">E-mail<span>*</span></label>
+                <input type="email" id="email" name="E-mail">
+
+                <label for="phoneNumber">Phone Number<span>*</span></label>
+                <input type="tel" id="phoneNumber" name="Phone Number">
+
+                <div class="buttons">
+                    <button type="button">Next<i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!--========== Payment Form ==========-->
+    <div class="paymentForm">
+        <div class="paymentFormContainer">
+            <span class="backBtn"><i class="fa-solid fa-angle-left"></i>Back</span>
+            <h1>Payment</h1>
+            <div class="wrapper">
+                <!-- Payment Part -->
+                <div class="paymentPart">
+                    <div class="personnelInfo">
+                        <div>
+                            <label for="firstNameInput">First Name<span>*</span></label>
+                            <input type="text" id="firstNameInput" name="First Name">
+                        </div>
+
+                        <div>
+                            <label for="lastNameInput">Last Name<span>*</span></label>
+                            <input type="text" id="lastNameInput" name="Last Name">
+                        </div>
+                    </div>
+
+                    <div class="cardInfo">
+                        <div class="cardNumberDiv">
+                            <label for="cardNumber">Card Number<span>*</span></label>
+                            <input type="text" id="cardNumber" name="Card Number">
+                        </div>
+
+                        <div class="EDCCDiv">
+                            <div>
+                                <label for="expiryDate">Expiry Date<span>*</span></label>
+                                <input type="text" id="expiryDate" name="Expiry Date" placeholder="MM/YY">
+                            </div>
+
+                            <div>
+                                <label for="cvv">CVV<span>*</span></label>
+                                <input type="text" id="cvv" name="CVV">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total Part -->
+                <div class="totalPart">
+                    <div class="chosedDiches">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="label">
+                        <h1>total: <span></span></h1>
+                    </div>
+                    <button type="submit" id="orderButton">Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order was sent Pop Up -->
+    <div class="OrderWasSentPopUp">
+        <div class="OrderWasSentPopUpContent">
+            <i class="fa-solid fa-check"></i>
+            <h1>Order was sent</h1>
+            <p>You will receive your order after few hours</p>
+            <a class="backToHomeBtn" href="../../index.html">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

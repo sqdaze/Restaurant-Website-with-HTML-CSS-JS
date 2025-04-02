@@ -1,0 +1,2184 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+/*========== Commun Styles ==========*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background-color: #fff8dc;
+}
+
+input.error, textarea.error{
+    background-color: #fdb8b8;
+    border: 1px solid #db2d2d;
+    border-radius: 2px;
+    outline-color: #db2d2d;
+}
+
+
+
+
+
+/*========== Header Style ==========*/
+/*----- Navbar -----*/
+Header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: 0px 2px 15px #00000050;
+}
+
+Header .navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+Header .navbar nav{
+    width: 100%;
+    height: 100%;
+    background-color: #fff8dc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+Header .navbar nav i.fa-bars{
+    display: none;
+}
+
+Header .navbar nav i.fa-bars:hover{
+    color: #562b0d;
+}
+
+/* Logo */
+.logo{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #8b4513;
+    text-decoration: none;
+    margin-left: 100px;
+    text-transform: uppercase;
+}
+
+.logo i{
+    font-size: 50px;
+    padding-right: 10px;
+}
+
+/* List */
+Header .navbar nav .backdrop{
+    display: none;
+}
+
+Header .navbar nav ul{
+    display: flex;
+    gap: 15px;
+    margin-right: 100px;
+}
+
+Header .navbar nav ul i.fa-x{
+    display: none;
+}
+
+Header .navbar nav ul li{
+    list-style: none;
+}
+
+Header .navbar nav ul li a{
+    color: #8b4513;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 10px 15px;
+    border-radius: 60px;
+    transition: .3s;
+}
+
+Header .navbar nav ul li a:hover{
+    color: #fff8dc;
+    background-color: #8b4513;
+}
+
+/*========== Header Media Query ==========*/
+/*========================================*/
+@media (max-width: 1450px){
+    /*========== Header Style ==========*/
+    /*----- Navbar -----*/
+    /* Logo */
+    .logo{
+        margin-left: 50px;
+    }
+
+    /* List */
+    Header .navbar nav ul{
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 1350px){
+    /*========== Header Style ==========*/
+    /*----- Navbar -----*/
+    /* Logo */
+    .logo{
+        margin-left: 30px;
+    }
+
+    /* List */
+    Header .navbar nav ul{
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 1200px){
+    /*========== Header Style ==========*/
+    /*----- Navbar -----*/
+    Header .navbar nav i.fa-bars{
+        display: block;
+        position: absolute;
+        right: 30px;
+        font-size: 36px;
+        cursor: pointer;
+        color: #8b4513;
+        transition: .3s;
+    }
+
+    Header .navbar nav i.fa-bars:hover{
+        color: #562b0d;
+    }
+
+    /* List */
+    Header .navbar nav .backdrop{
+        width: 100%;
+        height: 100vh;
+        background-color: #0000007e;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: .3s;
+    }
+
+    Header .navbar nav ul{
+        flex-direction: column;
+        gap: 40px;
+        margin-right: 0;
+        position: absolute;
+        top: 0;
+        right: -1000px;
+        background: #fff8dc;
+        width: 50%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+    }
+
+    Header .navbar nav ul i.fa-x{
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        font-size: 30px;
+        cursor: pointer;
+        color: #8b4513;
+        transition: .3s;
+    }
+
+    Header .navbar nav ul i.fa-x:hover{
+        color: #562b0d;
+    }
+
+    Header .navbar nav ul li a{
+        font-size: 28px;
+        padding: 10px 150px;
+    }
+}
+
+@media (max-width: 1000px){
+    /*========== Header Style ==========*/
+    /*----- Navbar -----*/
+    Header .navbar nav ul li a{
+        padding: 10px 120px;
+    }
+}
+
+@media (max-width: 900px){
+    /*========== Header Style ==========*/
+    /*----- Navbar -----*/
+    /* List */
+    Header .navbar nav ul li a{
+        padding: 10px 90px;
+    }
+}
+
+@media (max-width: 800px){
+    /*========== Header Style ==========*/
+    /*----- Navbar -----*/
+    /* List */
+    Header .navbar nav ul li a{
+        padding: 10px 50px;
+    }
+}
+
+@media (max-width: 700px){
+    /*========== Header Style ==========*/
+    /*----- Navbar -----*/
+    Header .navbar nav i.fa-bars{
+        font-size: 30px;
+    }
+
+    /* Logo */
+    .logo{
+        font-size: 15px;
+        margin-left: 30px;
+    }
+
+    .logo i{
+        font-size: 38px;
+    }
+
+    /* List */
+    Header .navbar nav .backdrop{
+        visibility: hidden;
+    }
+
+    Header .navbar nav ul{
+        width: 100%;
+    }
+
+    Header .navbar nav ul li a{
+        padding: 10px 150px;
+    }
+}
+
+@media (max-width: 600px){
+    /*========== Header Style ==========*/
+    /*----- Navbar -----*/
+    Header .navbar nav i.fa-bars{
+        right: 20px;
+    }
+
+    /* Logo */
+    .logo{
+        margin-left: 20px;
+    }
+
+    /* List */
+    Header .navbar nav ul li a{
+        padding: 10px 120px;
+    }
+}
+
+@media (max-width: 500px){
+    /*========== Header Style ==========*/
+    /*----- Navbar -----*/
+    /* List */
+    Header .navbar nav ul i.fa-x{
+        font-size: 26px;
+    }
+
+    Header .navbar nav ul li a{
+        padding: 10px 90px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 400px){
+    /*========== Header Style ==========*/
+    Header .navbar nav i.fa-bars{
+        font-size: 28px;
+    }
+
+    /* Logo */
+    .logo{
+        font-size: 12px;
+    }
+
+    .logo i{
+        font-size: 30px;
+    }
+
+    /*----- Navbar -----*/
+    /* List */
+    Header .navbar nav ul li a{
+        padding: 10px 50px;
+    }
+}
+
+
+
+
+
+/*========== Main style ==========*/
+main{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 100px;
+}
+
+/*----- Home Section Style -----*/
+main section.home{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff8dcc5;
+}
+
+main section.home .content{
+    width: fit-content;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #8b4513;
+}
+
+main section.home .content h1{
+    font-size: 100px;
+    width: 1500px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 95px;
+}
+
+main section.home .content p{
+    width: 600px;
+    text-align: center;
+    font-size: 25px;
+}
+
+main #orderButton{
+    margin-top: 30px;
+    padding: 15px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 60px;
+    border: #8b4513 solid 4px;
+    transition: .3s;
+    text-decoration: none;
+    color: #8b4513;
+}
+
+main #orderButton:hover{
+    letter-spacing: 1px;
+}
+
+main section.home video{
+    z-index: -1;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/*========== Home Section Media Query ==========*/
+/*==============================================*/
+@media (max-width: 1350px){
+    main #orderButton{
+        padding: 14px 19px;
+        font-size: 23px;
+    }
+
+    /*----- Home Section Style -----*/
+    main section.home .content h1{
+        font-size: 90px;
+        width: 1200px;
+        line-height: 85px;
+    }
+    
+    main section.home .content p{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1250px){
+    /*----- Home Section Style -----*/
+    main section.home .content h1{
+        font-size: 85px;
+        line-height: 80px;
+    }
+}
+
+@media (max-width: 1160px){
+    /*----- Home Section Style -----*/
+    main section.home .content h1{
+        font-size: 75px;
+        line-height: 70px;
+    }
+
+    main section.home .content p{
+        font-size: 20px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 1050px){
+    /*----- Home Section Style -----*/
+    main section.home .content h1{
+        font-size: 90px;
+        width: 800px;
+        line-height: 85px;
+    }
+    
+    main section.home .content p{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 800px){
+    /*----- Home Section Style -----*/
+    main section.home .content h1{
+        font-size: 80px;
+        line-height: 75px;
+    }
+    
+    main section.home .content p{
+        font-size: 22px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 700px){
+    main #orderButton{
+        padding: 12px 20px;
+        font-size: 20px;
+    }
+
+    /*----- Home Section Style -----*/
+    main section.home .content h1{
+        font-size: 70px;
+        line-height: 65px;
+    }
+    
+    main section.home .content p{
+        font-size: 20px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 590px){
+    main #orderButton{
+        font-size: 19px;
+    }
+
+    /*----- Home Section Style -----*/
+    main section.home .content h1{
+        font-size: 60px;
+        line-height: 55px;
+        width: 400px;
+    }
+    
+    main section.home .content p{
+        font-size: 18px;
+        width: 330px;
+    }
+}
+
+@media (max-width: 500px){
+    main #orderButton{
+        padding: 10px 18px;
+        font-size: 17px;
+        border: 3px solid #8b4513;
+    }
+
+    /*----- Home Section Style -----*/
+    main section.home .content h1{
+        font-size: 50px;
+        line-height: 45px;
+    }
+    
+    main section.home .content p{
+        font-size: 17px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 430px){
+    main #orderButton{
+        padding: 9px 17px;
+        font-size: 16px;
+    }
+
+    /*----- Home Section Style -----*/
+    main section.home .content h1{
+        font-size: 40px;
+        line-height: 35px;
+        width: 450px;
+    }
+    
+    main section.home .content p{
+        font-size: 16px;
+        width: 250px;
+    }
+}
+
+/*----- Menu Section -----*/
+main section.menu{
+    width: 100%;
+    height: 100vh;
+    background-color: #8b4513;
+    overflow: hidden;
+}
+
+main section.menu .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 95px;
+}
+
+main section.menu .container .imagePart{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+main section.menu .container .imagePart img{
+    width: 500px;
+}
+
+main section.menu .container .textPart{
+    width: 50%;
+    color: #ffd700;
+    display: flex;
+    flex-direction: column;
+}
+
+main section.menu .container .textPart h1{
+    text-transform: uppercase;
+    font-size: 100px;
+}
+
+main section.menu .container .textPart p{
+    font-size: 25px;
+}
+
+main section.menu .container .textPart #orderButton{
+    color: #ffd700;
+    border-color: #ffd700;
+    width: fit-content;
+}
+
+/*========== Menue section Media Query ==========*/
+/*===============================================*/
+@media (max-width: 1450px){
+    /*----- Menu Section -----*/
+    main section.menu .container{
+        padding: 0 80px;
+    }
+
+    main section.menu .container .textPart h1{
+        font-size: 90px;
+        line-height: 85px;
+        margin-bottom: 15px;
+    }
+
+    main section.menu .container .textPart p{
+        font-size: 22px;
+        width: 500px;
+    }
+
+    main section.menu .container .imagePart img{
+        width: 480px;
+    }
+}
+
+@media (max-width: 1250px){
+    /*----- Menu Section -----*/
+    main section.menu .container{
+        padding: 0 70px;
+    }
+
+    main section.menu .container .textPart h1{
+        font-size: 85px;
+        line-height: 80px;
+        margin-bottom: 16px;
+    }
+
+    main section.menu .container .imagePart img{
+        width: 430px;
+    }
+}
+
+@media (max-width: 1050px){
+    /*----- Menu Section -----*/
+    main section.menu{
+        height: auto;
+    }
+
+    main section.menu .container{
+        flex-direction: column;
+        padding: 80px 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main section.menu .container .textPart{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    main section.menu .container .textPart h1{
+        font-size: 90px;
+        line-height: 85px;
+    }
+
+    main section.menu .container .textPart p{
+        font-size: 20px;
+        width: 500px;
+    }
+
+    main section.menu .container .imagePart{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 700px){
+    /*----- Menu Section -----*/
+    main section.menu .container .textPart h1{
+        font-size: 70px;
+        line-height: 65px;
+    }
+
+    main section.menu .container .textPart p{
+        width: 350px;
+    }
+
+    main section.menu .container .imagePart img{
+        width: 400px;
+    }
+}
+
+@media (max-width: 600px){
+    /*----- Menu Section -----*/
+    main section.menu .container .textPart h1{
+        font-size: 60px;
+        line-height: 55px;
+    }
+
+    main section.menu .container .textPart p{
+        font-size: 18px;
+        width: 330px;
+    }
+
+    main section.menu .container .imagePart img{
+        width: 350px;
+    }
+}
+
+@media (max-width: 550px){
+    /*----- Menu Section -----*/
+    main section.menu .container .textPart h1{
+        font-size: 50px;
+        line-height: 45px;
+        width: 400px;
+    }
+
+    main section.menu .container .textPart p{
+        font-size: 17px;
+        width: 300px;
+    }
+
+    main section.menu .container .imagePart img{
+        width: 330px;
+    }
+}
+
+@media (max-width: 450px){
+    /*----- Menu Section -----*/
+    main section.menu .container .textPart h1{
+        width: 300px;
+    }
+
+    main section.menu .container .textPart p{
+        font-size: 16px;
+        width: 250px;
+    }
+
+    main section.menu .container .imagePart img{
+        width: 280px;
+    }
+}
+
+
+/*----- Order Section -----*/
+main section.order{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ffd700;
+}
+
+main section.order .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 95px;
+    padding: 0 95px;
+}
+
+main section.order .imagePart{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+main section.order .imagePart img{
+    width: 200%;
+}
+
+main section.order .textPart{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    text-align: end;
+    flex-direction: column;
+    color: #8b4513;
+}
+
+main section.order .textPart h1{
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+main section.order .textPart p{
+    font-size: 25px;
+}
+
+main section.order .textPart a{
+    color: #ffd700;
+    background-color: #8b4513;
+    padding: 15px 20px;
+    width: fit-content;
+    transition: .3s;
+    margin-top: 30px;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+main section.order .textPart a:hover{
+    background-color: #562b0d;
+}
+
+/*========== Order Section Media Query ==========*/
+/*===============================================*/
+@media (max-width: 1450px){
+    /*----- Order Section -----*/
+    main section.order .container{
+        padding: 0 80px;
+        gap: 80px;
+    }
+
+    main section.order .textPart h1{
+        font-size: 90px;
+        line-height: 85px;
+        margin-bottom: 15px;
+    }
+
+    main section.order .textPart p{
+        font-size: 22px;
+        width: 500px;
+    }
+
+    main section.order .textPart a{
+        padding: 14px 19px;
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 1250px){
+    /*----- Order Section -----*/
+    main section.order .container{
+        padding: 0 70px;
+        gap: 70px;
+    }
+
+    main section.order .textPart p{
+        width: 400px;
+    }
+
+    main section.order .textPart h1{
+        font-size: 85px;
+        line-height: 80px;
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 1050px){
+    /*----- Order Section -----*/
+    main section.order{
+        height: auto;
+    }
+
+    main section.order .container{
+        padding: 80px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+
+    main section.order .imagePart{
+        width: 100%;
+        height: 400px;
+    }
+
+    main section.order .textPart{
+        width: 100%;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    main section.order .textPart p{
+        font-size: 20px;
+    }
+
+    main section.order .textPart h1{
+        font-size: 90px;
+        line-height: 85px;
+    }
+}
+
+@media (max-width: 800px){
+    /*----- Order Section -----*/
+    main section.order .imagePart{
+        height: 350px;
+    }
+
+    main section.order .imagePart img{
+        width: 150%;
+    }
+
+    main section.order .textPart h1{
+        width: 500px;
+    }
+}
+
+@media (max-width: 700px){
+    /*----- Order Section -----*/
+    main section.order .imagePart{
+        height: 300px;
+    }
+    
+    main section.order .textPart h1{
+        font-size: 70px;
+        line-height: 65px;
+    }
+
+    main section.order .textPart p{
+        font-size: 20px;
+        width: 350px;
+    }
+
+    main section.order .textPart a{
+        padding: 12px 20px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px){
+    /*----- Order Section -----*/
+    main section.order .imagePart{
+        height: 270px;
+    }
+    
+    main section.order .textPart h1{
+        font-size: 60px;
+        line-height: 55px;
+    }
+
+    main section.order .textPart p{
+        font-size: 18px;
+        width: 330px;
+    }
+
+    main section.order .textPart a{
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 550px){
+    /*----- Order Section -----*/
+    main section.order .imagePart{
+        height: 235px;
+    }
+    
+    main section.order .textPart h1{
+        font-size: 50px;
+        line-height: 45px;
+        width: 400px;
+    }
+
+    main section.order .textPart p{
+        font-size: 17px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 450px){
+    /*----- Order Section -----*/
+    main section.order .imagePart{
+        height: 200px;
+    }
+    
+    main section.order .textPart h1{
+        width: 300px;
+    }
+
+    main section.order .textPart p{
+        font-size: 16px;
+        width: 250px;
+    }
+
+    main section.order .textPart a{
+        padding: 9px 17px;
+        font-size: 16px;
+    }
+}
+
+
+/*----- About Section -----*/
+main section.about{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #8b4513;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main section.about .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-direction: column;
+    position: relative;
+    padding: 95px 0;
+}
+
+main section.about .container .titlePart{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffd700;
+}
+
+main section.about .container .titlePart h1{
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+main section.about .container .aboutPart{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main section.about .container .aboutPart p{
+    font-size: 20px;
+    text-align: center;
+    color: #ffd700;
+    width: 800px;
+}
+
+/*========== About Section Media Query ==========*/
+/*===============================================*/
+@media (max-width: 1450px){
+    main section.about .container .titlePart h1{
+        font-size: 90px;
+    }
+
+    main section.about .container .aboutPart p{
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 1250px){
+    main section.about .container .titlePart h1{
+        font-size: 85px;
+    }
+
+    main section.about .container .aboutPart p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1050px){
+    main section.about{
+        height: auto;
+    }
+
+    main section.about .container .titlePart h1{
+        font-size: 90px;
+    }
+
+    main section.about .container .aboutPart p{
+        font-size: 19px;
+        width: 600px;
+    }
+}
+
+@media (max-width: 750px){
+    main section.about .container .titlePart h1{
+        font-size: 80px;
+    }
+
+    main section.about .container .aboutPart p{
+        font-size: 18px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 650px){
+    main section.about .container .titlePart h1{
+        font-size: 70px;
+    }
+
+    main section.about .container .aboutPart p{
+        font-size: 17px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 550px){
+    main section.about .container .aboutPart p{
+        width: 300px;
+    }
+}
+
+@media (max-width: 500px){
+    main section.about .container .titlePart h1{
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 450px){
+    main section.about .container .titlePart h1{
+        width: 250px;
+        text-align: center;
+    }
+
+    main section.about .container .aboutPart p{
+        font-size: 15px;
+        width: 250px;
+    }
+}
+
+
+/*----- Contact Section -----*/
+main section.contact{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ffd700;
+}
+
+main section.contact .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    padding: 95px 0;
+    position: relative;
+}
+
+main section.contact .container .titlePart{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b4513;
+}
+
+main section.contact .container .titlePart h1{
+    font-size: 95px;
+    text-transform: uppercase;
+}
+
+main section.contact .container .contactFormPart{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main section.contact .container .contactFormPart form{
+    width: 650px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main section.contact .container .contactFormPart form label{
+    color: #8b4513;
+}
+
+main section.contact .container .contactFormPart form label span{
+    color: red;
+}
+
+main section.contact .container .contactFormPart form input{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 25px;
+    padding: 0 10px;
+    color: #8b4513;
+}
+
+main section.contact .container .contactFormPart form textarea{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+    padding: 10px;
+    color: #8b4513;
+}
+
+main section.contact .container .contactFormPart form button{
+    width: 100%;
+    height: 65px;
+    margin-top: 25px;
+    border: none;
+    background-color: #8b4513;
+    color: #ffd700;
+    font-size: 26px;
+    cursor: pointer;
+    transition: .3s;
+    opacity: .5;
+    pointer-events: none;
+}
+
+main section.contact .container .contactFormPart form button:hover{
+    background-color: #562b0d;
+}
+
+/*========== Contact Section Media Query ==========*/
+/*=================================================*/
+@media (max-width: 1450px){
+    main section.contact .container .titlePart h1{
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 1450px){
+    main section.contact .container .titlePart h1{
+        font-size: 85px;
+    }
+}
+
+@media (max-width: 1050px){
+    main section.contact .container .titlePart h1{
+        font-size: 90px;
+        width: 450px;
+        line-height: 100px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px){
+    main section.contact .container .titlePart h1{
+        font-size: 80px;
+    }
+
+    main section.contact .container .contactFormPart form{
+        width: 550px;
+    }
+}
+
+@media (max-width: 650px){
+    main section.contact .container .titlePart h1{
+        font-size: 70px;
+        width: 450px;
+        line-height: 80px;
+    }
+
+    main section.contact .container .contactFormPart form{
+        width: 450px;
+    }
+}
+
+@media (max-width: 550px){
+    main section.contact .container .contactFormPart form{
+        width: 350px;
+    }
+}
+
+@media (max-width: 500px){
+    main section.contact .container .titlePart h1{
+        font-size: 55px;
+        width: 350px;
+        line-height: 70px;
+    }
+
+    main section.contact .container .contactFormPart form{
+        width: 300px;
+    }
+}
+
+@media (max-width: 450px){
+    main section.contact .container .contactFormPart form{
+        width: 250px;
+    }
+}
+
+
+
+
+
+/*========== Footer Style ==========*/
+footer{
+    position: relative;
+    top: 100px;
+    width: 100%;
+    background-color: #8b4513;
+}
+
+footer .container{
+    width: 100%;
+    height: 100%;
+}
+
+footer .container .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+footer .container .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    color: #fff8dc;
+}
+
+footer .container .content .socialMedia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .container .content .socialMedia ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+footer .container .content .socialMedia ul i{
+    font-size: 22px;
+    color: #fff8dc;
+    cursor: pointer;
+}
+
+/*========== Footer Media Query ==========*/
+/*========================================*/
+@media (max-width: 700px){
+    /*========== Footer Style =====*/
+    footer .container .content{
+        flex-direction: column-reverse;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    footer .container .content .copyright{
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .container .content .copyright span{
+        font-size: 13px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+/*========== Order Page Style ==========*/
+body.orderBody{
+    background-color: #ffd700;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+body.orderBody .choseDishesAndChosedDishes{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    
+    padding: 50px 0;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .backToHomeBtn{
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    gap: 3px;
+    font-size: 18px;
+    color: #8b4513;
+    transition: .3s;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .backToHomeBtn:hover{
+    color: #562b0d;
+}
+
+
+/*----- Chose Dishes -----*/
+body.orderBody .choseDishesAndChosedDishesContainer .choseDishes{
+    width: fit-content;
+    height: fit-content;
+    background-color: #8b4513;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 28px;
+    color: #fff8dc;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 25px;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer .listsContainers{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer div{
+    display: flex;
+    gap: 15px;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer .listsContainers h1{
+    width: 100%;
+    color: #fff8dc;
+    background-color: #562b0d;
+    padding: 0;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer .listsContainers ul li{
+    display: flex;
+    background-color: #fff8dc;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-left: 15px;
+    font-size: 16px;
+    color: #8b4513;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer .listsContainers ul li span{
+    display: flex;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer .listsContainers ul li i{
+    background-color: #ffd700;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer ul li i:hover{
+    background-color: #e8c502;
+}
+
+/*========== Chose Dishes Media Query ==========*/
+/*==============================================*/
+@media (max-width: 1350px){
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .title{
+        padding-top: 35px;
+    } 
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer{
+        padding: 50px 100px;
+        padding-top: 30px;
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 900px){
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .title{
+        padding-top: 30px;
+        font-size: 23px;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer{
+        padding: 45px;
+        gap: 45px;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer .listsContainers h1{
+        font-size: 22px;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer .listsContainers ul li i{
+        font-size: 18px;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer .listsContainers ul li{
+        gap: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 700px){
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .title{
+        font-size: 18px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer{
+        gap: 50px;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer ul{
+        gap: 10px;
+    }
+
+    .foodLists, .drinksLists{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 550px){
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .title{
+        font-size: 20px;
+        width: 100px;
+        text-align: center;
+        line-height: 45px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer .listsContainers h1{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 450px){
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer{
+        padding: 20px;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer .listsContainers ul li{
+        gap: 0;
+        font-size: 13px;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .choseDishes .foodsAndDrinksListsContainer .listsContainers ul li i{
+        font-size: 16px;
+    }
+}
+
+
+/*----- Chosed Dishes -----*/
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes{
+    width: 1306px;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes .chosedDishesContent{
+    width: 100%;
+    height: 100%;
+    background-color: #fff8dc;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes .chosedDishesContent ul{
+    width: 100%;
+    background-color: #efe9cf;
+    list-style: none;
+    display: flex;
+    padding: 30px;
+    align-items: start;
+    justify-content: start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes .chosedDishesContent ul h1{
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    color: #8b4513;
+}
+
+/* Clear all button */
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes .chosedDishesContent ul .clearAllBtnDiv{
+    width: 100%;
+    margin-bottom: 25px;
+    padding-top: 5px;
+    display: none;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes .chosedDishesContent ul .clearAllBtnDiv .clearAllBtn{
+    width: fit-content;
+    background-color: red;
+    color: #820000;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: .3s;
+    font-size: 15px;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes .chosedDishesContent ul .clearAllBtnDiv .clearAllBtn:hover{
+    background-color: #f90000;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent ul li{
+    background-color: #fff8dc;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: #8b4513;
+    display: flex;
+    align-items: center;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent ul li span:nth-child(1){
+    display: inline;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent ul li span:nth-child(1) div.price{
+    display: inline;
+    margin-right: 10px;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent ul li .dishesNumbersSpan{
+    font-size: 25px;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent ul li span:nth-child(2) .dishesNumbers{
+    font-size: 25px;
+    width: 50px;
+    border: none;
+    text-align: center;
+    border-bottom: 2px #562b0d solid;
+    background-color: transparent;
+    height: 23px;
+    color: #562b0d;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent ul li i{
+    margin-left: 20px;
+    background-color: #efe9cf;
+    border-radius: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent ul li i:hover{
+    background-color: #dcd6be;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent button{
+    width: 100%;
+    background-color: #8b4513;
+    color: #fff8dc;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s;
+    opacity: .5;
+    pointer-events: none;
+}
+
+body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent button:hover{
+    background-color: #562b0d;
+}
+
+/*========== Chosed Dishes Media Query ==========*/
+/*===============================================*/
+@media (max-width: 1350px){
+    body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes{
+        width: 825px;
+    }
+}
+
+@media (max-width: 900px){
+    body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes{
+        width: 622px;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes .chosedDishesContent ul{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 700px){
+    body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes{
+        width: 488px;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent ul h1{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 550px){
+    body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes{
+        width: 360px;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent ul li span:nth-child(1) div.price{
+        margin-right: 0;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent ul li{
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent ul li i{
+        margin-left: 0;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 450px){
+    body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes{
+        width: 285px;
+    }
+
+    body.orderBody .choseDishesAndChosedDishesContainer .chosedDishes div.chosedDishesContent ul li{
+        padding: 20px 20px;
+    }
+}
+
+
+/*----- Informations Form -----*/
+body.orderBody .informationsForm{
+    width: 850px;
+    height: fit-content;
+    background-color: #fff8dc;
+    display: none;
+}
+
+body.orderBody .informationsForm .informationsFormContainer{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+body.orderBody .informationsForm .informationsFormContainer form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+body.orderBody .informationsForm .informationsFormContainer form input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    color: #8b4513;
+}
+
+body.orderBody .informationsForm .informationsFormContainer form label{
+    color: #8b4513;
+    font-size: 15px;
+}
+
+body.orderBody .informationsForm .informationsFormContainer form label span{
+    color: red;
+}
+
+body.orderBody .informationsForm .informationsFormContainer form .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+body.orderBody .informationsForm .informationsFormContainer form .buttons button{
+    padding: 15px 25px;
+    border: none;
+    background-color: #8b4513;
+    color: #fff8dc;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    justify-content: center;
+    transition: .3s;
+    pointer-events: none;
+    opacity: .5;
+}
+
+body.orderBody .informationsForm .informationsFormContainer form .buttons button:hover{
+    background-color: #562b0d;
+}
+
+body.orderBody .informationsForm .informationsFormContainer form .buttons button i{
+    font-size: 25px;
+}
+
+
+/*----- Payment Form -----*/
+body.orderBody .paymentForm{
+    background-color: #fff8dc;
+    display: none;
+}
+
+body.orderBody .paymentForm .paymentFormContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+    padding-top: 20px;
+}
+
+span.backBtn{
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 20px;
+    width: fit-content;
+    color: #8b4513;
+    transition: .3s;
+}
+
+span.backBtn i{
+    font-size: 20px;
+}
+
+span.backBtn:hover{
+    color: #562b0d;
+}
+
+body.orderBody .paymentForm .paymentFormContainer h1{
+    color: #562b0d;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .wrapper{
+    display: flex;
+    gap: 40px;
+    border-top: solid #8b4513 2px;
+}
+
+/*-- Payment Part --*/
+body.orderBody .paymentForm .paymentFormContainer .paymentPart{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-right: solid #8b4513 2px;
+    padding-right: 40px;
+    color: #8b4513;
+}
+
+/* Personnel Info */
+body.orderBody .paymentForm .paymentFormContainer .paymentPart .personnelInfo{
+    display: flex;
+    gap: 20px;
+    padding-top: 40px;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .paymentPart .personnelInfo div{
+    display: flex;
+    flex-direction: column;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .paymentPart label{
+    font-size: 15px;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .paymentPart label span{
+    color: red;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .paymentPart input{
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    color: #8b4513;
+}
+
+/* Card Info */
+body.orderBody .paymentForm .paymentFormContainer .paymentPart .cardInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .paymentPart .cardInfo .cardNumberDiv label{
+    display: flex;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .paymentPart .cardInfo div.EDCCDiv{
+    display: flex;
+    gap: 20px;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .paymentPart .cardInfo div.EDCCDiv div{
+    display: flex;
+    flex-direction: column;
+}
+
+/*-- Total Part --*/
+body.orderBody .paymentForm .paymentFormContainer .totalPart{
+    padding-top: 40px;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .totalPart .chosedDiches{
+    margin-bottom: 30px;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .totalPart .chosedDiches ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .totalPart .chosedDiches ul li{
+    color: #8b4513;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+body.orderBody .paymentForm .paymentFormContainer .totalPart .chosedDiches ul li:last-child{
+    margin-bottom: 0;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .totalPart .chosedDiches ul li span:nth-child(1){
+    display: flex;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .totalPart .chosedDiches ul li span input{
+    color: #562b0d;
+    border: none;
+    background-color: transparent;
+    pointer-events: none;
+    font-size: 22px;
+    width: 30px;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .totalPart .chosedDiches ul li .dishesNumbersSpan{
+    font-size: 22px;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .totalPart .label{
+    color: #562b0d;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .totalPart .label h1{
+    font-size: 32px;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .totalPart .label span{
+    color: #8b4513;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .totalPart button{
+    background-color: #8b4513;
+    color: #fff8dc;
+    padding: 20px 40px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+    opacity: .5;
+    pointer-events: none;
+}
+
+body.orderBody .paymentForm .paymentFormContainer .totalPart button:hover{
+    background-color: #562b0d;
+}
+
+/*========== Payment Form Media Query ==========*/
+/*==============================================*/
+@media (max-width: 960px){
+    /*----- Payment Form -----*/
+    body.orderBody .paymentForm .paymentFormContainer .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    body.orderBody .paymentForm .paymentFormContainer h1{
+        text-align: center;
+        line-height: 45px;
+        font-size: 43px;
+    }
+
+    /*-- Payment Part --*/
+    body.orderBody .paymentForm .paymentFormContainer .paymentPart{
+        border: none;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    /*-- Total Part --*/
+    body.orderBody .paymentForm .paymentFormContainer .totalPart{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 2px solid #8b4513;
+    }
+
+    body.orderBody .paymentForm .paymentFormContainer .totalPart .chosedDiches ul{
+        align-items: center;
+    }
+}
+
+@media (max-width: 370px){
+    /*----- Payment Form -----*/
+    /*-- Total Part --*/
+    body.orderBody .paymentForm .paymentFormContainer .totalPart .chosedDiches ul{
+        gap: 30px;
+    }
+
+    body.orderBody .paymentForm .paymentFormContainer .totalPart .chosedDiches ul li{
+        font-size: 15px;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    body.orderBody .paymentForm .paymentFormContainer .totalPart .label h1{
+        font-size: 30px;
+    }
+}
+
+
+/*----- Order was sent Pop Up -----*/
+body.orderBody .OrderWasSentPopUp{
+    background-color: #8b4513;
+    width: 680px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    display: none;
+    animation: orderWasSentPopUpAnimation .3s 1;
+}
+
+body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent i{
+    font-size: 45px;
+    background-color: #3bfe3b;
+    color: #fff8dc;
+    padding: 10px 12px;
+    border-radius: 50%;
+}
+
+body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent h1{
+    font-size: 45px;
+    color: #fff8dc;
+}
+
+body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent p{
+    color: #ebe5cb;
+}
+
+body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent a{
+    margin-top: 30px;
+    cursor: pointer;
+    background-color: #fff8dc;
+    color: #8b4513;
+    padding: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent a:hover{
+    background-color: #ebe5cb;
+}
+
+/* Order was sent Pop Up Animation */
+@keyframes orderWasSentPopUpAnimation{
+    from{
+        transform: scale(.8);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+/*========== Order was sent Pop Up Media Query ==========*/
+/*=======================================================*/
+@media (max-width: 750px){
+    /*----- Order was sent Pop Up -----*/
+    body.orderBody .OrderWasSentPopUp{
+        width: 450px;
+    }
+
+    body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent i{
+        font-size: 35px;
+    }
+
+    body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent h1{
+        font-size: 38px;
+    }
+
+    body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent p{
+        font-size: 14px;
+    }
+
+    body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent a{
+        padding: 14px;
+    }
+}
+
+@media (max-width: 500px){
+    /*----- Order was sent Pop Up -----*/
+    body.orderBody .OrderWasSentPopUp{
+        width: 300px;
+        height: 430px;
+    }
+
+    body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent i{
+        margin-bottom: 20px;
+    }
+
+    body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent h1{
+        width: 150px;
+        text-align: center;
+        line-height: 33px;
+        margin-bottom: 15px;
+        font-size: 40px;
+    }
+
+    body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent p{
+        font-size: 15px;
+        width: 100px;
+        text-align: center;
+    }
+
+    body.orderBody .OrderWasSentPopUp .OrderWasSentPopUpContent a{
+        margin-top: 25px;
+    }
+}
